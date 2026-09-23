@@ -101,3 +101,14 @@ Assets/Scripts
 3. Run **Tools > Giant Wanted > Build Now (defaults)** to put together the playable scene.
 4. Optional: run **Tools > Giant Wanted > Assign Sounds** and **Tools > Giant Wanted > Add Bullet Kill Cam**.
 5. Press **Play**.
+
+## Editor Tools
+
+All tools live under **Tools > Giant Wanted**:
+
+| Menu item | What it does |
+|-----------|--------------|
+| **Build Game Scene...** | Opens the builder window, where you pick the source art and tuning before building. |
+| **Build Now (defaults)** | Builds the full scene with default settings: player rig, pooled bullets, giant prefab with hit boxes, HUD, spawner and game flow. Safe to run again. |
+| **Assign Sounds** | Connects the clips in `Assets/Sounds` to `GameAudio` and sets up looping music. |
+| **Add Bullet Kill Cam** | Adds the bullet cam to a hand-tuned scene without touching anything that already exists. |
