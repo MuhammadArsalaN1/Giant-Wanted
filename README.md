@@ -77,3 +77,14 @@ Assets/Scripts
 | `HoldButton` | Button that reports press and release, which drives full-auto fire. |
 | `DamagePopup` | World-space floating damage number. |
 | `WorldHealthBar` | Billboarded health bar above a giant. It only shows once the giant has been hit. |
+
+## Architecture
+
+- **Event-driven flow**: `GameManager`, `WaveSpawner` and `WeaponController` raise C# events.
+  The HUD, audio and kill cam subscribe to them instead of polling, so systems stay decoupled.
+- **Optional references**: most components resolve missing references at `Awake` and skip
+  anything that is not assigned. You can strip parts of the HUD or leave audio clips empty.
+- **Pooling**: `SimplePool<T>` backs bullets, effects, popups and giants, so there is no
+  instantiation in the hot path.
+- **Cinematic hold**: the kill cam can pause wave progression and hold the trigger, so the
+  hero bullet and the wave banner never fight over the moment.
