@@ -37,3 +37,43 @@ Assets/Scripts
 ├── UI          # HUD, hold button, damage popups, world-space health bars
 └── Editor      # One-click scene builder and setup utilities (editor only)
 ```
+
+## Scripts Overview
+
+### Combat
+| Script | Purpose |
+|--------|---------|
+| `IDamageable` | Interface for anything a projectile can hurt. |
+| `HitBox` | Collider on a giant that forwards damage to its owner with a multiplier. The head is the weak point. |
+| `Projectile` | Pooled tracer bullet. Sweeps a raycast between frames so it never tunnels through targets. |
+
+### Core
+| Script | Purpose |
+|--------|---------|
+| `GameManager` | Owns the run: game state, wave order, city health, score and coins. Exposes events for other systems. |
+| `SimplePool<T>` | Minimal generic component pool. |
+| `FxPool` | Pooled short-lived effects: impacts, explosions and damage numbers. |
+| `CameraShaker` | Additive trauma-based camera shake. |
+| `GameAudio` | Event-driven one-shots and music. Every clip is optional. |
+| `BulletCam` | Cinematic slow-motion kill cam for the last giant of a wave. |
+
+### Enemy
+| Script | Purpose |
+|--------|---------|
+| `Giant` | Flying giant AI: approach, hover, lunge-attack the city, die and sink. Drives animator states by name. |
+| `WaveSpawner` | Spawns pooled giants on a ring around the city and tracks who is still alive. |
+
+### Player
+| Script | Purpose |
+|--------|---------|
+| `PlayerAim` | Turret-style drag aiming with smoothing, zoom, recoil recovery and aim assist. |
+| `WeaponController` | Fire rate, spread, magazine and reload, muzzle flash, recoil and shake. |
+| `WeaponRecoil` | Procedural gun kick and idle sway on the view-model. |
+
+### UI
+| Script | Purpose |
+|--------|---------|
+| `HUD` | Connects the canvas to the game: ammo, wave, score, coins, city health, reticle and banners. |
+| `HoldButton` | Button that reports press and release, which drives full-auto fire. |
+| `DamagePopup` | World-space floating damage number. |
+| `WorldHealthBar` | Billboarded health bar above a giant. It only shows once the giant has been hit. |
