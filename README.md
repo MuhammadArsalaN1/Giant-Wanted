@@ -22,3 +22,18 @@ and bring every giant down before they tear the city apart.
 | Fire   | Hold the **FIRE** button | Hold `Space` or right mouse button |
 | Zoom   | **Zoom** button | **Zoom** button |
 | Reload | **Reload** button (auto-reloads when empty) | `R` |
+
+## Project Structure
+
+All gameplay code lives in `Giant Wanted/Assets/Scripts`, under the `GiantWanted`
+namespace. Editor tooling uses `GiantWanted.EditorTools`.
+
+```
+Assets/Scripts
+├── Combat      # Damage contract, hit boxes and swept-raycast projectiles
+├── Core        # Game flow, pooling, audio, camera shake, bullet kill cam
+├── Enemy       # Giant AI and the wave spawner
+├── Player      # Turret aiming, the weapon and procedural recoil
+├── UI          # HUD, hold button, damage popups, world-space health bars
+└── Editor      # One-click scene builder and setup utilities (editor only)
+```
