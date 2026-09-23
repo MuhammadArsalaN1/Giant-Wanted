@@ -13,3 +13,12 @@ and bring every giant down before they tear the city apart.
 - **City health, score and coins**: coins persist between runs through `PlayerPrefs`.
 - **Mobile first**: touch drag aiming, a hold-to-fire button, zoom and reload buttons, and light aim assist.
 - **Pooled everything**: bullets, effects, popups and giants are pooled, so long runs do not allocate.
+
+## Controls
+
+| Action | Mobile | Editor / Desktop |
+|--------|--------|------------------|
+| Aim    | Drag anywhere on screen | Left mouse drag |
+| Fire   | Hold the **FIRE** button | Hold `Space` or right mouse button |
+| Zoom   | **Zoom** button | **Zoom** button |
+| Reload | **Reload** button (auto-reloads when empty) | `R` |
