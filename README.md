@@ -121,3 +121,7 @@ Most balance values are exposed in the Inspector:
 - **Giant** (`Giant`): health `200`, speed, attack range, interval and damage, score and coin rewards.
 - **Waves** (`GameManager` / `Wave`): count, health and speed multipliers, spawn interval, max concurrent giants, and endless growth rates.
 - **Aim** (`PlayerAim`): drag sensitivity, pitch limits, FOV zoom, and aim-assist angle and range.
+
+## Author
+
+Developed by **Farhan Bajwa**.
