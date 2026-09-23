@@ -88,3 +88,16 @@ Assets/Scripts
   instantiation in the hot path.
 - **Cinematic hold**: the kill cam can pause wave progression and hold the trigger, so the
   hero bullet and the wave banner never fight over the moment.
+
+## Getting Started
+
+### Requirements
+- Unity **6000.0.60f1** (Unity 6) with the Universal Render Pipeline
+- Android or iOS build support for mobile builds
+
+### Setup
+1. Clone the repository and open the `Giant Wanted` folder in Unity Hub.
+2. Open `Assets/Scenes/SampleScene.unity`. It holds the environment, gun, bullet and monster art.
+3. Run **Tools > Giant Wanted > Build Now (defaults)** to put together the playable scene.
+4. Optional: run **Tools > Giant Wanted > Assign Sounds** and **Tools > Giant Wanted > Add Bullet Kill Cam**.
+5. Press **Play**.
